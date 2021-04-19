@@ -59,7 +59,7 @@ public class Main {
     /**
      * Função Inicial do Programa
      * Executa enquanto o utilizador indicar que quer continuar
-     * @param args
+     * @param args - Não utilizado
      */
     public static void main(String[] args){
         Main exec = new Main();
