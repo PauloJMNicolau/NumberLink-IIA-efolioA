@@ -1,8 +1,15 @@
 import java.util.Scanner;
 
+/**
+ * Classe que possui os métodos iniciais do programa
+ */
 public class Main {
-    private Algoritmo dados;
+    private Algoritmo dados; //Atributo que guarda os dados de execução do programa
 
+    /**
+     * Função para mostrar a solução encontrada (caso encontre)
+     * e os dados de execução do programa
+     */
     public void mostrarDados(){
         if (dados.getSolucao()!= null && dados.getTempoS() / 60 > 1){
             System.out.println("Foi encontrada a seguinte solução, mas ultrapassou o tempo limite:");
@@ -20,6 +27,9 @@ public class Main {
         System.out.format("Tempo gasto (minuto): %fmin\n", dados.getTempoM());
     }
 
+    /**
+     * Função que solicita ao utilizador qual o tabuleiro e algoritmo que pretende testar
+     */
     public void executar(){
         System.out.print("Selecione um Tabuleiro de 1 a 12.\nTabuleiro: ");
         Scanner op = new Scanner(System.in);
@@ -46,6 +56,11 @@ public class Main {
         mostrarDados();
     }
 
+    /**
+     * Função Inicial do Programa
+     * Executa enquanto o utilizador indicar que quer continuar
+     * @param args
+     */
     public static void main(String[] args){
         Main exec = new Main();
         Scanner ler = new Scanner(System.in);
